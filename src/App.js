@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import Cart from './components/Cart';
+import './styles/styles.css';
 
-function App() {
+const  App = ()  => {
+  
+  const plantList = [
+    {id:1, name: 'Ficus', price:10},
+    {id:2, name: 'Monstera', price:15},
+    {id:3, name: 'Cactus', price:8},
+  ];
+
+  const [cart,setCart] = useState(plantList);
+
+  const removeFromCart = (id) => {
+    setCart((prevCart) => prevCart.filter((plant) => plant.id !== id))
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <h1>🏬 Boutique de Plantes</h1>
+      <Cart cart={cart} removeFromCart={removeFromCart} />
     </div>
   );
-}
+};
 
 export default App;

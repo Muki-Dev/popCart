@@ -1,0 +1,59 @@
+/*Styles Globaux*/
+body{
+	font-display: Arial, sans-serif;
+	background-color: #f5f5f5;
+	text-align: center;
+	margin: 0;
+	padding: 20px;
+}
+
+/*Container principal*/
+.app-container{
+	max-width: 500px;
+	margin: 0 auto;
+	background: white;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+
+/*heading 1*/
+h1{
+	color: #2c3e50;
+}
+
+/*Style du panier*/
+.cart-container{
+	margin-top: 20px;
+}
+
+.cart-item{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #e3e3e3;
+	padding: 10px;
+	margin: 5px 0;
+	border-radius: 5px;
+}
+
+/*Bouton supprimer*/
+.delete-btn{
+	background: red;
+	color: white;
+	border: none;
+	padding: 5px 10px;
+	cursor: pointer;
+	border-radius: 5px;
+	transition: 0.3s;
+}
+
+.delete-btn:hover{
+	background: darkred;
+}
+
+/*Panier vide*/
+.empty-cart{
+	color: gray;
+	font-style: italic;
+}
